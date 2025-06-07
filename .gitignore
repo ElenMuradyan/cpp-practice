@@ -1,0 +1,8 @@
+.vscode/
+
+run.bat
+
+*.exe
+
+*.o
+*.obj
