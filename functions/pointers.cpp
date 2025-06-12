@@ -126,11 +126,52 @@ void sortArray (int arr[], int length){
     sortArray(arr, length - 1);
 }
 
-int main () {
-    int arr[] = {3, -7, 9, 0, 1};
-    sortArray(arr, 5);
-    for(int i = 0; i < 5; i++){
-        cout << arr[i] << endl;
+void reverseString (char *str, int end, int start) {
+    if(end <= start){
+        return;
     }
-    return 0;
+
+    char temp = *(str + start);
+    *(str + start) = *(str + end - 1);
+    *(str + end - 1) = temp;
+
+    reverseString(str, end - 1, start + 1);
+}
+
+void allocate2dArray () {
+    int sizeOfArray, sizeOfInnerArray;
+
+    cout << "Enter the size of the array." << endl;
+    cin >> sizeOfArray;
+    cout << "Enter the size of the inner arrays." << endl;
+    cin >> sizeOfInnerArray;
+
+    int **arr = new int*[sizeOfArray];
+
+    for(int i = 0; i < sizeOfArray; i++){
+        arr[i] = new int[sizeOfInnerArray];
+    }
+
+    for(int i = 0; i < sizeOfArray; i++){
+        cout << "Enter " << sizeOfInnerArray << " items for array " << i << endl;
+        for(int j = 0; j < sizeOfInnerArray; j++) {
+                cout << "Enter element " << j << " for array " << i << endl;
+                cin >> arr[i][j];
+                cout << endl;
+        }
+    }
+
+    cout << "You entered:\n";
+
+    for(int i = 0; i < sizeOfArray; i++){
+        for(int j = 0; j < sizeOfInnerArray; j++) {
+        cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    for(int i = 0; i < sizeOfArray; i++){
+        delete[] arr[i];
+    }
+    delete[] arr;
 }
