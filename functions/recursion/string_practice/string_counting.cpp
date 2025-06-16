@@ -33,3 +33,13 @@ string countLetters (string str, char letter, int count = 1){
         return letter + to_string(count) + countLetters(newStr, newStr[0]);
     }
 }
+
+void printSubsequences(string input, string output, int index){
+    if(index == input.length()){
+        cout << "\"" << output << "\"" << endl;
+        return;
+    }
+
+    printSubsequences(input, output, index + 1);
+    printSubsequences(input, output + input[index], index + 1);
+}

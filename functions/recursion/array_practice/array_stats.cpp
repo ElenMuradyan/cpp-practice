@@ -58,3 +58,25 @@ bool isSorted (int arr[], int length){
     }
     return true;
 }
+
+bool isSortedRecursion (int arr[], int length){
+    if(length == 0){
+        return true;
+    }
+
+    if(arr[0] > arr[1]){
+        return false;
+    }
+
+    return isSorted(arr + 1, length - 1);
+}
+
+int findMaxInArray (int arr[], int size){
+    if(size == 1){
+        return arr[0];
+    }
+
+    int maxval = findMaxInArray(arr + 1, size - 1);
+
+    return arr[0] > maxval ? arr[0] : maxval;
+}

@@ -31,3 +31,20 @@ void sortArray (int arr[], int length){
     }
     sortArray(arr, length - 1);
 }
+
+void rotateByOne (int arr[], int size){
+    for(int i = size - 1; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
+}
+
+void rotateArrayByIndex (int arr[], int size, int index) {
+    if(index == 0){
+        return;
+    }
+    int val = arr[size - 1];
+
+    rotateByOne(arr, size);
+    arr[0] = val;
+    rotateArrayByIndex(arr, size, index - 1);
+}

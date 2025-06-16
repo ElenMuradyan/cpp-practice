@@ -2,11 +2,12 @@
 #define STRING_UTILS_H
 
 #include <string>
+using namespace std;
 
 bool isPolindrom(std::string word);
 bool areAnagram(std::string w1, std::string w2);
 
-std::string capitalize(std::string str);
+string capitalize(std::string str);
 std::string replaceOccurrences(std::string str);
 std::string reverseStr(std::string str);
 
@@ -18,5 +19,7 @@ std::string removeVowels(std::string str);
 std::string removeSpaces(std::string str);
 
 std::string expandString(std::string str);
+bool isPalindromePointer (char *str, int start, int end);
+void printSubsequences(string input, string output, int index);
 
 #endif 

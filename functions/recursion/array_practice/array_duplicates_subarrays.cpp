@@ -64,3 +64,19 @@ int * findLongestSubarray (int arr[], int length, int & outLength){
     outLength = maxLength;
     return subArray;
 }
+
+int binarySearchRecursive(int arr[], int start, int end, int key) {
+    if(start > end){
+        return -1;
+    }
+
+    int mid = ((start + end)/2);
+
+    if(arr[mid] == key){
+        return mid;
+    }else if(key > arr[mid]){
+        return binarySearchRecursive(arr, mid + 1, end, key);
+    }else{
+        return binarySearchRecursive(arr, start, mid -1, key);
+    }
+}
