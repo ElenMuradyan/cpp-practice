@@ -48,3 +48,19 @@ void rotateArrayByIndex (int arr[], int size, int index) {
     arr[0] = val;
     rotateArrayByIndex(arr, size, index - 1);
 }
+
+int removeElement (int arr[], int size, int elem, int i = 0){
+    if(i == size){
+        return size;
+    }
+
+    if(arr[i] == elem){        
+        cout << arr[i] << "hi " << elem << endl;
+
+        for(int j = i; j < size - 1; j++){
+            arr[j] = arr[j + 1];
+        }
+        return removeElement(arr, size - 1, elem, i);
+    }
+    return removeElement(arr, size, elem, i + 1);
+}

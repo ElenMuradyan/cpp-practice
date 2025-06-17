@@ -27,5 +27,7 @@ int findMaxInArray (int arr[], int size);
 int binarySearchRecursive(int arr[], int start, int end, int key);
 void rotateByOne (int arr[], int size);
 void rotateArrayByIndex (int arr[], int size, int index);
-
+void printArraySubs (int arr[], int size, int i, string output);
+int removeElement (int arr[], int size, int elem, int i = 0);
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int merged[], int i = 0, int j = 0, int k = 0);
 #endif

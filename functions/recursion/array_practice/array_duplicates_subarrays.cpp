@@ -80,3 +80,12 @@ int binarySearchRecursive(int arr[], int start, int end, int key) {
         return binarySearchRecursive(arr, start, mid -1, key);
     }
 }
+void printArraySubs (int arr[], int size, int i, string output) {
+    if(i == size){
+        cout << "\"" << output << "\"" << endl;
+        return; 
+    }
+
+    printArraySubs(arr, size, i + 1, output);
+    printArraySubs(arr, size, i + 1, output + to_string(arr[i]) + " ");
+}
