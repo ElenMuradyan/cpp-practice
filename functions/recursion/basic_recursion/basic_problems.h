@@ -17,5 +17,7 @@ int gcd (int a, int b);
 void towerOfHanoi (int n, char source, char helper, char destination);
 string decimalToBinary (int num);
 void replaceCharacters (char *str, char letter, char replace);
+int sumOfDigits2 (int n, const int &sum);
+int productOfDigits (int n, const int &product);
 
 #endif 
