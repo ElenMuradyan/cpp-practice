@@ -2,6 +2,7 @@
 #define STRING_UTILS_H
 
 #include <string>
+#include <vector>
 using namespace std;
 
 bool isPolindrome(std::string word);
@@ -21,5 +22,6 @@ std::string removeSpaces(std::string str);
 std::string expandString(std::string str);
 bool isPalindromePointer (char *str, int start, int end);
 void printSubsequences(string input, string output, int index);
+void generateStringPermutations (string str, int start, int end, vector<string> &result);
 
 #endif 

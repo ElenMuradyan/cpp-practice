@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -44,5 +45,18 @@ string replaceOccurrences (string str){
         return firstPart + "-" + replaceOccurrences(lastPart);
     }else{
         return str;
+    }
+}
+
+void generateStringPermutations (string str, int start, int end, vector<string> &result) {
+    if(start == end){
+        result.push_back(str);
+        return;
+    }
+
+    for(int i = start; i <= end; i++){
+        swap(str[start], str[i]);
+        generateStringPermutations (str, start + 1, end, result);
+        swap(str[start], str[i]);
     }
 }
