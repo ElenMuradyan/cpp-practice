@@ -1,4 +1,3 @@
-// pointer_utils.h
 #ifndef POINTER_UTILS_H
 #define POINTER_UTILS_H
 
@@ -18,5 +17,9 @@ int stringLength(const char *str);
 void sortArray(int arr[], int length);
 void reverseString(char *str, int end, int start);
 void allocate2dArray();
+bool isPalindromePointer (char *str, int start, int end);
+int* findDublicates(int arr[], int length, int &outLength);
+int* findLongestSubarray(int arr[], int length, int &outLength);
+int* mergeArrays(int arr1[], int arr2[], int length1, int length2);
 
 #endif

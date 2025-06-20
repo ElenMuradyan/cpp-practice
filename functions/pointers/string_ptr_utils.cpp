@@ -26,3 +26,15 @@ int stringLength (const char * str){
     }
     return length;
 }
+
+bool isPalindromePointer (char *str, int start, int end) {
+    if(end <= start){
+        return true;
+    }
+
+    if(*(str + start) == *(str + end - 1)){
+        return isPalindromePointer(str, start + 1, end - 1);
+    }else{
+        return false;
+    }
+}

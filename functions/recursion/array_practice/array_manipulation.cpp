@@ -11,12 +11,6 @@ int* reverseArray (int arr[], int reversed[], int length, int idx = 0){
     return reverseArray(arr, reversed, length, idx + 1);
 }
 
-void rotateArrayByIndex (int arr[], int rotated[], int length, int index){
-    for(int i = 0; i < length; ++i){
-        rotated[i] = arr[(i + index) % length];
-    }
-}
-
 void sortArray (int arr[], int length){
     if(length <= 1){
         return;
@@ -30,23 +24,6 @@ void sortArray (int arr[], int length){
         }
     }
     sortArray(arr, length - 1);
-}
-
-void rotateByOne (int arr[], int size){
-    for(int i = size - 1; i > 0; i--) {
-        arr[i] = arr[i - 1];
-    }
-}
-
-void rotateArrayByIndex (int arr[], int size, int index) {
-    if(index == 0){
-        return;
-    }
-    int val = arr[size - 1];
-
-    rotateByOne(arr, size);
-    arr[0] = val;
-    rotateArrayByIndex(arr, size, index - 1);
 }
 
 int removeElement (int arr[], int size, int elem, int i = 0){
