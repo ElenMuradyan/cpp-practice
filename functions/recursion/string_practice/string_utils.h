@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-bool isPolindrom(std::string word);
+bool isPolindrome(std::string word);
 bool areAnagram(std::string w1, std::string w2);
 
 string capitalize(std::string str);

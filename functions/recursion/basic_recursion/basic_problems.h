@@ -1,6 +1,8 @@
 #ifndef BASIC_PROBLEMS_H
 #define BASIC_PROBLEMS_H
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
 int factorial(int num);
@@ -19,5 +21,8 @@ string decimalToBinary (int num);
 void replaceCharacters (char *str, char letter, char replace);
 int sumOfDigits2 (int n, const int &sum);
 int productOfDigits (int n, const int &product);
+void nThStep (int n, int &ways, int way = 0);
+void generateBinary(int n, string current, vector<string> &res);
+void nThStep (int n, int &ways, int way = 0);
 
 #endif 

@@ -4,7 +4,7 @@
 #include "string_utils.h"
 using namespace std;
 
-bool isPolindrom (string word) {
+bool isPolindrome (string word) {
     if (word.empty()) {
         return true; 
     }
@@ -15,7 +15,7 @@ bool isPolindrom (string word) {
     char first = word[0];
     char last = word[word.length() - 1];
     if(first == last){
-        return true && isPolindrom(word.substr(1, word.length() - 2));
+        return true && isPolindrome(word.substr(1, word.length() - 2));
     }else{
         return false;
     }

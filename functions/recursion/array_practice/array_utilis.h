@@ -19,6 +19,7 @@ int findMajorityElement(int arr[], int length);
 
 int* findDublicates(int arr[], int length, int &outLength);
 int* findLongestSubarray(int arr[], int length, int &outLength);
+bool isPalindrome (int arr[], int start, int end);
 
 int sumOfArray(int arr[], int size);
 int subArraySum(int arr[], int length);

@@ -80,3 +80,14 @@ int findMaxInArray (int arr[], int size){
 
     return arr[0] > maxval ? arr[0] : maxval;
 }
+
+bool isPalindrome (int arr[], int start, int end) {
+    if(start >= end){
+        return true;
+    }
+
+    if(arr[start] == arr[end]){
+        return isPalindrome(arr, start + 1, end - 1);
+    }
+    return false;
+}
