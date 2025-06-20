@@ -24,5 +24,9 @@ int productOfDigits (int n, const int &product);
 void nThStep (int n, int &ways, int way = 0);
 void generateBinary(int n, string current, vector<string> &res);
 void nThStep (int n, int &ways, int way = 0);
+int squarePower(int num, int power);
+int tribonachi(int n);
+int josephus(int n, int k);
+int C(int n);
 
 #endif 

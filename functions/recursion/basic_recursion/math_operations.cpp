@@ -47,3 +47,40 @@ void generateBinary(int n, string current, vector<string> &res) {
     generateBinary(n, current + "1", res);
     generateBinary(n, current + "0", res);
 }
+
+int squarePower (int num, int power){
+    if(power == 1){
+        return num;
+    }
+
+    int half = squarePower(num, power / 2);
+
+    return power % 2 ? half * half * num : half * half; 
+}
+
+int josephus (int n, int k) {
+    if(n == 1) return 0;
+
+    return (josephus(n - 1, k) + k) % n;
+}
+
+int C (int n) {
+    if(n <= 1){
+        return 1;
+    }
+
+    int sum = 0;
+
+    for(int i = 0; i < n ; i++){
+        sum = sum + C(i) * C(n - i - 1);
+    }
+
+    return sum;
+}
+
+int tribonachi (int n) {
+    if(n == 3) return 1;
+    if(n < 3) return 0;
+
+    return tribonachi(n - 1) + tribonachi(n - 2) + tribonachi(n - 3);
+}
