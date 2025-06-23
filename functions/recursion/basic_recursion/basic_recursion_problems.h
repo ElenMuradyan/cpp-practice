@@ -28,5 +28,7 @@ int squarePower(int num, int power);
 int tribonachi(int n);
 int josephus(int n, int k);
 int C(int n);
+int fibonachiMemo (int n, vector<int> &nums);
+int CatalanMemo (int n, vector<int> &nums);
 
 #endif 

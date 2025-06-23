@@ -84,3 +84,21 @@ int tribonachi (int n) {
 
     return tribonachi(n - 1) + tribonachi(n - 2) + tribonachi(n - 3);
 }
+
+
+int fibonachiMemo (int n, vector<int> &nums) {
+    if(n <= 1) return n;
+    if(nums[n] != -1) return nums[n];
+    nums[n] = fibonachiMemo(n - 1, nums) + fibonachiMemo(n - 2, nums);
+    return nums[n];
+}
+
+int CatalanMemo (int n, vector<int> &nums) {
+    if(n <= 0) return 1;
+    if(nums[n] != -1) return nums[n];
+    nums[n] = 0;
+    for(int i = 0; i < n; i++){
+        nums[n] += CatalanMemo(i, nums) * CatalanMemo(n - i - 1, nums);
+    }
+    return nums[n];
+}
