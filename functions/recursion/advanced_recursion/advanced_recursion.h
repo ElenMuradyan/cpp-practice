@@ -5,7 +5,7 @@
 #include <string>
 
 using namespace std;
-
+int countWays (int n, vector<vector<int>> canDo, int person, vector<int> &tasks);
 bool KnightsTour(vector<vector<int>> &board, int n, int x, int y, int moveCount);
 vector<vector<string>> nQueens(int n);
 void RatInAMaze(int n, int x, int y, string path, vector<string> &paths);
