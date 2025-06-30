@@ -7,7 +7,7 @@ struct MinMax {
 };
 
 void swapIntegers(int *a, int *b);
-void reverseArray(int arr[], int length, int ind = 0);
+void reverseArray1(int arr[], int length, int ind = 0);
 int countVowels(const char *str);
 MinMax findMaxAndMin(int arr[], int length);
 void allocateArray();
@@ -21,5 +21,6 @@ bool isPalindromePointer (char *str, int start, int end);
 int* findDublicates(int arr[], int length, int &outLength);
 int* findLongestSubarray(int arr[], int length, int &outLength);
 int* mergeArrays(int arr1[], int arr2[], int length1, int length2);
+void reverseArray2 (int arr[], int length, int ind = 0){
 
 #endif

@@ -38,3 +38,15 @@ bool isPalindromePointer (char *str, int start, int end) {
         return false;
     }
 }
+
+void reverseString (char *str, int end, int start) {
+    if(end <= start){
+        return;
+    }
+
+    char temp = *(str + start);
+    *(str + start) = *(str + end - 1);
+    *(str + end - 1) = temp;
+
+    reverseString(str, end - 1, start + 1);
+}

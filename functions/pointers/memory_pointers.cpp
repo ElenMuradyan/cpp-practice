@@ -71,3 +71,9 @@ int* copyArray (int arr[], int length){
     }
     return copy;
 }
+
+void swapIntegers (int *a, int *b){
+    int value = *a;
+    *a = *b;
+    *b = value;
+}

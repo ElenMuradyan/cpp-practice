@@ -115,14 +115,29 @@ int * findLongestSubarray (int arr[], int length, int & outLength){
     return subArray;
 }
 
-int* reverseArray (int arr[], int reversed[], int length, int idx = 0){
+int* reverseArray1 (int arr[], int reversed[], int length, int idx = 0){
     if(length == idx){
         return reversed;
     }
 
     reversed[idx] = arr[length - 1 - idx];
-    return reverseArray(arr, reversed, length, idx + 1);
+    return reverseArray1(arr, reversed, length, idx + 1);
 }
+
+void reverseArray2 (int arr[], int length, int ind = 0){
+    if(length <= 1 || ind == length/2){
+        return;
+    }
+
+    int *start = &arr[ind];
+    int *end = &arr[length - 1 - ind];
+
+    int temp = *start;
+    *start = *end;
+    *end = temp;
+    reverseArray2(arr, length, ind + 1);
+}
+
 int * mergeArrays (int arr1[], int arr2[], int length1, int length2){
     sortArray(arr1, length1);
     sortArray(arr2, length2);
@@ -147,4 +162,18 @@ int * mergeArrays (int arr1[], int arr2[], int length1, int length2){
         mergedarray[c++] = arr2[b++];
     }
     return mergedarray;
+}
+
+void reverseArray (int arr[], int length, int ind = 0){
+    if(length <= 1 || ind == length/2){
+        return;
+    }
+
+    int *start = &arr[ind];
+    int *end = &arr[length - 1 - ind];
+
+    int temp = *start;
+    *start = *end;
+    *end = temp;
+    reverseArray(arr, length, ind + 1);
 }
